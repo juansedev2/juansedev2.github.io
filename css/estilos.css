@@ -1,0 +1,362 @@
+/*
+TODO: Realizar los estilos para modo responsive, ya que por el momento el primer problema es el menú y en general debo ajustarlo lo necesario
+*/
+
+/* !Selector universal para indicar lo siguiente:
+ * Eliminar el margin y padding que tienen por defecto los contenedores y tomar control de estos
+ * para todos los elementos que cree a partir de ahora, eliminando espacio extra de relleno
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+/* ! Variables de colores*/
+:root {
+  --color-negro: black;
+  --color-blanco: white;
+  --color-negroClaro: rgb(80, 80, 87);
+  --color-negroTran: rgba(0, 0, 0, 0.82);
+  --color-negroTran2: rgba(0, 0, 0, 0.75);
+  --color-beige-oscurito: #f3d899;
+  --color-rojo-claro: #f71735;
+  --color-azul-cool: #1c3041; /* ! Reservado para sección de contacto*/
+  --color-azul-cool2: #1c4775;
+  --color-verde-claro-cool: #00b295;
+}
+/* * INICIO ESTILOS DEL HEADER Y EL MENÚ DE NAVEGACIÓN*/
+.header {
+  background-color: var(--color-negro);
+  height: 90px;
+  position: sticky;  /* ! Para que el menú acompañe el viewport*/
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;  /*Para superposición por encima de otros*/
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 0 40px;
+  line-height: 80px;
+}
+
+.nav-menu {
+  display: flex;
+  margin-right: 40px;
+  list-style: none;
+}
+
+.nav-menu-item {
+  font-size: 18px;
+  margin: 0 10px;
+  line-height: 80px;
+  text-transform: uppercase;
+  width: max-content;
+}
+
+.nav-menu-link {
+  padding: 8px 12px;
+  border-radius: 3px;
+}
+
+.nav-menu-link:hover,
+.nav-menu-link_active {
+  background-color: #034574;
+  transition: 0.5s;
+}
+
+/* TOGGLE */
+.nav-toggle {
+  color: white;
+  background: none;
+  border: none;
+  font-size: 30px;
+  padding: 0 20px;
+  line-height: 60px;
+  cursor: pointer;
+
+  display: none;
+}
+
+/* MOBILE */
+@media (max-width: 795px) {
+  .header {
+    height: 90px;
+    top: 0;
+    left: 0;
+    position: sticky;  /* ! Para que el menú acompañe el viewport*/
+    width: 100%;
+  }
+
+  .logo {
+    font-size: 25px;
+    padding: 0 20px;
+    line-height: 60px;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    background-color: #2c3e50;
+    position: fixed;
+    top: 60px;
+    width: 100%;
+    padding: 20px 0;
+
+    height: calc(100% - 60px);
+    overflow-y: auto;
+
+    left: 100%;
+    transition: left 0.3s;
+  }
+
+  .nav-menu-item {
+    line-height: 70px;
+  }
+
+  .nav-menu-link:hover,
+  .nav-menu-link_active {
+    background: none;
+    color: #83c5f7;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-menu_visible {
+    left: 0;
+  }
+
+  .nav-toggle:focus:not(:focus-visible) {
+    outline: none;
+  }
+}
+
+/* * INICIO DE ESTILOS DE LA IMAGEN DE BIENVENIDA*/
+#contenedor_presentacion {
+  width: 100%;
+  height: auto;
+  background-image: url(/img/code5.png); /*La imagen está bien; pero necesita un retoque*/
+  background-attachment: fixed; /* * Para que la imagen siga a la barra de scroll*/
+  background-size: 100%; /* ! Con esto indico que mi fondo ocupe el 100$ del contenedor y no se repita*/
+  box-sizing: border-box;
+}
+section.presentacion {
+  height: auto;
+  background-color: var(--color-negroTran); /*!Agregamos un fondo que logra oscurecer la imagen anterior debido a la transparencia*/
+  text-align: center; /*Para centrar todos los elementos (texto e imágenes)*/
+}
+/*Necesitamos ajustar la imagen de fondo del contenedor*/
+div.contenedor_imagen img {
+  width: 18%;
+  border-radius: 50%; /*! Con porcentaje se hace un borde circular*/
+  position: relative;
+}
+section.presentacion h1, p, h2 {
+  color: var(--color-blanco);
+  padding: 1%;
+}
+section.presentacion > h1 {
+  font-size: 2.4rem;
+}
+section.presentacion > p {
+  margin-top: 0.1%;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+section.presentacion > h2 {
+  font-size: 2rem;
+}
+section.presentacion p.mi_descripcion {
+  font-size: 1.6rem;
+  text-align: justify;
+  line-height: 8vh; /*Espacio entre líneas del texto según el alto de pantalla*/
+  font-weight: bolder;
+  margin-top: -4%; /*Lo reduzco un poco porque se vería muy separado el texto del título*/
+}
+.contenedor_descripcion {
+  background-color: rgb(5, 5, 5);
+}
+p.titulo_mi_descripcion {
+  margin: 0;
+  font-size: 3.5vh;
+}
+/* * INICIO ESTILOS de sección de habilidades técnicas FRONT*/
+#contenedor_habilidades_tecnicas_front {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+section.presentacion_hb_tec {
+  display: flex; /* Grande flexbox, salud por el genio que lo hizo*/
+}
+/* ! Este es el contenedor del los íconos del front, debe ocupar la mitad del contenedor*/
+section.logos_tecnologias {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: auto;
+  background-color: var(--color-beige-oscurito);
+  border: 1px solid var(--color-beige-oscurito);
+}
+/* ! Este es el contenedor de la descripción del front, debe ocupar la mitad del contenedor*/
+section.descrip_tecnologias {
+  width: 50%;
+  height: auto;
+  background-color: var(--color-rojo-claro);
+  border: 1px solid var(--color-rojo-claro);
+}
+.contenedor_logos img.logo {
+  max-width: 150px;
+  min-width: 100px;
+  margin: 0 3% 6%;
+}
+
+/* *Sección de los logos y el título de los logos*/
+div.contenedor_logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* !Los logos se deben centrar*/
+  align-content: center; /* !Los logos se deben alinear siempre al centro*/
+  height: auto;
+}
+section.logos_tecnologias > h1 {
+  text-align: center;
+  font-size: 3.8rem;
+  padding: 7vw 0 7vw;
+}
+section.descrip_tecnologias > h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  padding: 7% 0 7%;
+  color: var(--color-blanco);
+}
+div.descrip_dominio {
+  display: flex;
+  flex-wrap: wrap; /* ! El texto se sale al no caber, por lo tanto debo forzarlo a que esté envuelto*/
+  justify-content: flex-start;
+  margin-left: 15%; /*El texto casi que se sale del contenedor, por lo tanto correrlo a la izquierda*/
+}
+div.descrip_dominio ul {
+  color: var(--color-blanco);
+}
+div.descrip_dominio ul li {
+  font-size: 2.1rem;
+  margin: 7% 0 20%;
+}
+
+/* * INICIO ESTILOS de sección de habilidades técnicas BACK
+! IMPORTANTE: REUTILIZO LA ANTERIOR SECCIÓN HTML porque es lo mismo pero en orden invetido, sin embargo, añado la clase
+! de back a los elementos de esa sección para poder modificarlos en caso de que algo tenga que ser diferente (VER clases en la sección Back)*/
+#contenedor_habilidades_tecnicas_back {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+/* * INICIO SECCIÓN HABILIDADES PERSONALES*/
+/* TODO: Terminar de acomodar sección de habilidades personales con flexbox según el diseño acordado
+   TODO: por cierto, tengo los contenedores, esos son los que debo ajustar*/
+#contenedor_halidades_personales {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  background-color: var(--color-verde-claro-cool); /*TODO BUSCAR UN MEJOR COLOR PARA EL FONDO DE HABILIDADES PERSONALES*/
+  border: 1x solid var(--color-verde-claro-cool);
+}
+.presentacion_habilidades_personales > h1 {
+  color: var(--color-blanco);
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: bolder;
+  padding: 5% 0 7%;
+}
+.contenedor_habilidades {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: auto;
+}
+.contenedor_habilidad{
+  border: none;
+
+}
+.contenedor_habilidad{  /* ! Los elementos del contenedor también deben manipularse con flex box para acomodarse*/
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;  /*´Para que se apilen entre si*/
+  box-sizing: border-box;
+  width: 40vw;
+  margin: 1% 1% 7%;
+}
+.contenedor_habilidad h1{
+  color: black;
+  font-size: 2.5em;
+  font-weight: bolder;
+  line-height: 3vh;
+  text-align: center;
+}
+.contenedor_habilidad p {
+  color: black;
+  font-size: 1.7em;
+  font-weight: bolder;
+  line-height: 4vh;
+  text-align: center;
+  margin-top: 3vw;
+  text-align: justify;
+}
+.contenedor_habilidad img {
+  max-width: 300px;
+  min-width: 100px;
+  margin: auto;  /* ! Para centrar los logos*/
+}
+
+/* * INICIO ESTILOS de sección de proyectos*/
+/* TODO: Tanto en HTML como CSS mejorar la presentación de los proyectos cuando estén refinados*/
+section#contenedor_proyectos{
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+section#presentacion_proyectos{
+  width: 100%;
+  height: auto;
+}
+section.presentacion_proyectos h1{
+  text-align: center;
+  margin: 5vw 0 7vw;
+  font-size: 2.5rem;
+}
+div.contenedor_pry{
+  display: flex;
+  flex-wrap: nowrap;  /* ! Por el momento dejemoslo en nowrap para que no salte de espacio por la imagen*/
+  flex-direction: row;
+  justify-content: space-around;
+  height: auto;
+}
+div.imagen img{
+  max-width: 20vw;
+  min-width: 10vw;
+}
+div.descrip_pry ul{
+  margin: 3vw 0 0;
+}
+div.descrip_pry li{
+  margin: 2vw;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
