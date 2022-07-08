@@ -55,7 +55,7 @@ TODO: Realizar los estilos para modo responsive, ya que por el momento el primer
   list-style: none;
 }
 .nav-menu-item {
-  font-size: 18px;
+  font-size: 1.4em;
   margin: 0 10px;
   line-height: 80px;
   text-transform: uppercase;
@@ -68,7 +68,7 @@ TODO: Realizar los estilos para modo responsive, ya que por el momento el primer
 .nav-menu-link:hover,
 .nav-menu-link_active {
   background-color: #034574;
-  transition: 0.5s;
+  transition: 0.5s;  /*Una leve transición de de animación al deslizar el menú*/
 }
 /* TOGGLE */
 .nav-toggle {
@@ -78,8 +78,7 @@ TODO: Realizar los estilos para modo responsive, ya que por el momento el primer
   font-size: 30px;
   padding: 0 20px;
   line-height: 60px;
-  cursor: pointer;
-
+  cursor: pointer;  /* Para cambiar el cursor en su imagen*/
   display: none;
 }
 
@@ -174,7 +173,7 @@ div.contenedor_logos {
 section.logos_tecnologias > h1 {
   text-align: center;
   font-size: 3.8rem;
-  padding: 7vw 0 7vw;
+  padding: 3vw 0 7vw;
 }
 section.descrip_tecnologias > h1 {
   text-align: center;
@@ -273,29 +272,41 @@ section#presentacion_proyectos{
   height: auto;
 }
 section.presentacion_proyectos h1{
-  text-align: center;
   margin: 5vw 0 7vw;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
+  text-align: center;
 }
 div.contenedor_pry{
   display: flex;
-  flex-wrap: nowrap;  /* ! Por el momento dejemoslo en nowrap para que no salte de espacio por la imagen*/
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-around;
-  height: auto;
+  align-items: center;
 }
-div.imagen img{
-  max-width: 20vw;
-  min-width: 10vw;
+div.proyecto{
+  margin: 2vw 1vw;
+  padding: 1vw 2.5vw;
+  box-shadow: 2px 2px 6px 3px gray;
+  text-align: center;
 }
-div.descrip_pry ul{
-  margin: 3vw 0 0;
+div.proyecto h1{
+  margin: 1vw;
 }
-div.descrip_pry li{
-  margin: 2vw;
-  font-size: 1.5rem;
-  font-weight: 500;
+div.proyecto p{
+  color: var(--color-negro);
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: .5vw;
 }
+div.proyecto a{
+  display: inline-block;
+  color: var(--color-azul-cool2);
+  font-weight: bold;
+  font-size: 1.2em;
+  margin: 15px;
+}
+
+/*TODO: HACER LA SECCIÓN DE CONTACTO*/
 
 /* ! INICIO MEDIA QUERY para toda la adpaptación de la página*/
 /* MOBILE */
