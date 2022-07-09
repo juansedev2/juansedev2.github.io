@@ -16,7 +16,7 @@ TODO: Realizar los estilos para modo responsive, ya que por el momento el primer
   --color-negro-cool: #1C1D21;
   --color-negro-Tree: #000000da;
   --color-blanco: white;
-  --color-blanco-oscurito: rgb(208, 208, 208);
+  --color-blanco-oscurito: rgb(233, 233, 233);
   --color-negroClaro: rgb(80, 80, 87);
   --color-negroTran: rgba(0, 0, 0, 0.82);
   --color-negroTran2: rgba(0, 0, 0, 0.75);
@@ -346,9 +346,6 @@ section.presentacion_contacto > h2{
   font-size: 1.9rem;
   padding: 3% 0 .1%;
 }
-
-
-
 /* ! INICIO MEDIA QUERY para toda la adpaptación de la página*/
 /* MOBILE */
 @media (max-width: 795px) {
