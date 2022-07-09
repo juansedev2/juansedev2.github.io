@@ -26,7 +26,7 @@ TODO: Realizar los estilos para modo responsive, ya que por el momento el primer
 /* * INICIO ESTILOS DEL HEADER Y EL MENÚ DE NAVEGACIÓN*/
 .header {
   background-color: var(--color-negro);
-  height: 90px;
+  height: 80px;
   position: sticky;  /* ! Para que el menú acompañe el viewport*/
   width: 100%;
   top: 0;
@@ -36,7 +36,7 @@ TODO: Realizar los estilos para modo responsive, ya que por el momento el primer
 .nav {
   display: flex;
   justify-content: space-between;
-  max-width: 1000px;
+  max-width: 950px;
   margin: 0 auto;
 }
 .nav-link {
@@ -172,12 +172,12 @@ div.contenedor_logos {
 }
 section.logos_tecnologias > h1 {
   text-align: center;
-  font-size: 3.8rem;
+  font-size: 2.7rem;
   padding: 3vw 0 7vw;
 }
 section.descrip_tecnologias > h1 {
   text-align: center;
-  font-size: 2.8rem;
+  font-size: 2.7rem;
   padding: 7% 0 7%;
   color: var(--color-blanco);
 }
@@ -191,7 +191,7 @@ div.descrip_dominio ul {
   color: var(--color-blanco);
 }
 div.descrip_dominio ul li {
-  font-size: 2.1rem;
+  font-size: 1.7rem;
   margin: 7% 0 20%;
 }
 
