@@ -9,7 +9,23 @@ TODO: Realizar los estilos para modo responsive, ya que por el momento el primer
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Lato', sans-serif;
 }
+/*! Fuentes de Lato: https://fonts.google.com/specimen/Lato#standard-styles*/
+/* lato-regular - latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/lato-v23-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/lato-v23-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/lato-v23-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/lato-v23-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/lato-v23-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/lato-v23-latin-regular.svg#Lato') format('svg'); /* Legacy iOS */
+}
+
 /* ! Variables de colores*/
 :root {
   --color-negro: black;
@@ -308,14 +324,14 @@ div.proyecto{
   text-align: center;
 }
 div.proyecto h1{
-  margin: 1vw;
+  margin: .6vw;
   font-size: 2rem;
 }
 div.proyecto p{
   color: var(--color-negro);
   font-size: 1.4em;
   font-weight: 800;
-  margin-bottom: .5vw;
+  margin-bottom: .7vw;
 }
 div.proyecto a{
   display: inline-block;
