@@ -419,7 +419,7 @@ div.contenedor_creditos{
   padding: .5% 0;
 }
 /* ! INICIO MEDIA QUERY para toda la adpaptación de la página*/
-/* * Tablets y relativamente PCs con menos pantalla horizontal(ojalá no esté sujeto a errores :/) */
+/* * Smartphones, Tablets y relativamente PCs con menos pantalla horizontal(ojalá no esté sujeto a errores :/) */
 @media (max-width: 900px) {
   .header {
   height: 80px;
@@ -476,8 +476,8 @@ div.contenedor_creditos{
   /**/
 }
 
-/* *Smartphones*/
-@media (max-width: 600px) {
+/* *Smartphones para cosas más puntuales en el diseño*/
+@media (max-width: 700px) {
   /*Título de bienvenida al portafolio*/
   section.presentacion > h1{
     font-size: 1.7rem;
@@ -548,8 +548,10 @@ div.contenedor_creditos{
   .contenedor_habilidad img{
     max-width: 160px;
   }
+  /*Descripción habilidad*/
   .contenedor_habilidad p{
     font-size: 1.3rem;
+    padding: 0 8%;
   }
   /*Título de la sección de proyectos*/
   section.presentacion_proyectos h1{
