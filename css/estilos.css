@@ -346,6 +346,35 @@ section.presentacion_contacto > h2{
   font-size: 1.9rem;
   padding: 3% 0 .1%;
 }
+div.contenedor_contacto{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: space-around;
+}
+div.contenedor_dato{
+  display: inherit;  /* *Heredar los estilos del contenedor padre*/
+  justify-content: inherit;
+  align-items: inherit;
+  align-content: inherit;
+  margin: 5%;
+}
+div.contenedor_dato p{
+  margin-left: inherit;
+  font-size: 1.5rem;
+}
+div.contenedor_dato span{
+  font-size: 1.8rem;
+}
+div.contenedor_dato span{
+  font-size: 1.8rem;
+}
+div.contenedor_dato p a{
+  color: var(--color-blanco);
+}
+
 /* ! INICIO MEDIA QUERY para toda la adpaptación de la página*/
 /* MOBILE */
 @media (max-width: 795px) {
