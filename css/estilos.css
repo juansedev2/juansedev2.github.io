@@ -25,6 +25,7 @@ TODO: Realizar los estilos para modo responsive, ya que por el momento el primer
   --color-azul-cool: #1c3041; /* ! Reservado para sección de contacto*/
   --color-azul-cool2: #1c4775;
   --color-azul-cool3: #08415C;
+  --color-azul-cool4: #2c3e50;
   --color-verde-claro-cool: #039e84;
 }
 /* * INICIO ESTILOS DEL HEADER Y EL MENÚ DE NAVEGACIÓN*/
@@ -329,7 +330,7 @@ section#contenedor_contacto{
   width: 100%;
   height: auto;
   box-sizing: border-box;
-  background-color: #08415C;
+  background-color: var(--color-azul-cool3);
 }
 section.presentacion_contacto{
   color: var(--color-blanco);
@@ -374,12 +375,36 @@ div.contenedor_dato span{
 div.contenedor_dato p a{
   color: var(--color-blanco);
 }
-
+/* * INICIO de estilos para el pie de página*/
+footer{
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  background-color: var(--color-negro);
+}
+div.contenedor_creditos{
+  display: flex;
+  color: var(--color-blanco);
+  justify-content: center;
+  align-items: center;
+}
+div.creditos{
+  text-align: center;
+}
+div.creditos h1{
+  margin: 5% 0;
+}
+div.creditos h3{
+  margin: 4% 0;
+}
+div.contenedor_creditos{
+  padding: .5% 0;
+}
 /* ! INICIO MEDIA QUERY para toda la adpaptación de la página*/
 /* MOBILE */
-@media (max-width: 795px) {
+@media (max-width: 900px) {
   .header {
-  height: 90px;
+  height: 80px;
   top: 0;
   left: 0;
   position: sticky;  /* ! Para que el menú acompañe el viewport*/
@@ -396,7 +421,7 @@ div.contenedor_dato p a{
   flex-direction: column;
   align-items: center;
   margin: 0;
-  background-color: #2c3e50;
+  background-color: var(--color-azul-cool4);
   position: fixed;
   top: 60px;
   width: 100%;
