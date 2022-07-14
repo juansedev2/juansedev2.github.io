@@ -518,5 +518,90 @@ div.contenedor_creditos{
     padding-left: 1%;
     margin: 7% 5% 20%;
   }
-  /**/
+  /*INCIO DEL BUG DE HABILIDADES PERSONALES
+  Lo que pasa es que estos se salen del ancho de pantalla y aparacer la barra de scroll*/
+  .contenedor_habilidades{
+    /*Como no caben, toca ponerlos en columna y centrarlos*/
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  .contenedor_habilidad{
+    text-align: center;
+    width: auto;  /*Automáticamente se ajustarán al centro del ancho de pantalla*/
+  }
+  /*Título de habilidades personales (sección)*/
+  .presentacion_habilidades_personales > h1{
+    font-size: 1.9rem;
+    padding: 14% 0 10%;
+    font-weight: bolder;
+  }
+  /*Título de las habilidades (cada uno)*/
+  .contenedor_habilidad h1{
+    font-size: 1.6rem;
+    padding-bottom: 6%;
+    font-weight: bolder;
+  }
+  /*Imágenes*/
+  .contenedor_habilidad img{
+    max-width: 160px;
+  }
+  .contenedor_habilidad p{
+    font-size: 1.3rem;
+  }
+  /*Título de la sección de proyectos*/
+  section.presentacion_proyectos h1{
+    font-size: 1.8rem;
+    padding: 15% 0;
+  }
+  /*Separación de los contendores en top y bottom*/
+  div.proyecto{
+    margin: 8% 5%;
+    padding: 1%;
+  }
+  /*Título de cada proyecto*/
+  div.proyecto h1{
+    font-size: 1.4rem;
+    padding: 6% 0 0;
+  }
+  /*Descripción de cada proyecto*/
+  div.proyecto p{
+    font-size: 1.1rem;
+  }
+  /*Imágenes*/
+  div.proyecto img{
+    max-width: 135px;
+  }
+  /*Título sección de contacto*/
+  section.presentacion_contacto > h1{
+    font-size: 1.8rem;
+    padding: 9% 0;
+  }
+  section.presentacion_contacto > h2{
+    font-size: 1.4rem;
+    padding: 6% 0;
+  }
+  div.contenedor_contacto{
+    flex-direction: column;
+  }
+  /*Imágenes*/
+  div.contenedor_contacto img{
+    max-width: 100px;
+  }
+  /*Texto de medios de comunicación*/
+  div.contenedor_dato span{
+    font-size: 1.3rem;
+  }
+  div.contenedor_dato p{
+    font-size: 1.1rem;
+  }
+  /*Pie de página en sus títulos*/
+  div.creditos h1{
+    font-size: 1.1rem;
+  }
+  div.creditos h3{
+    font-size: 1rem;
+  }
 }
