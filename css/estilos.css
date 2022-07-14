@@ -206,11 +206,13 @@ div.contenedor_logos {
 section.logos_tecnologias > h1 {
   text-align: center;
   font-size: 2.7rem;
+  font-weight: bolder;
   padding: 3vw 0 7vw;
 }
 section.descrip_tecnologias > h1 {
   text-align: center;
   font-size: 2.7rem;
+  font-weight: bolder;
   padding: 7% 0 7%;
   color: var(--color-blanco);
 }
@@ -417,7 +419,7 @@ div.contenedor_creditos{
   padding: .5% 0;
 }
 /* ! INICIO MEDIA QUERY para toda la adpaptación de la página*/
-/* MOBILE */
+/* * Tablets y relativamente PCs con menos pantalla horizontal(ojalá no esté sujeto a errores :/) */
 @media (max-width: 900px) {
   .header {
   height: 80px;
@@ -470,4 +472,51 @@ div.contenedor_creditos{
   .nav-toggle:focus:not(:focus-visible) {
   outline: none;
   }
+
+  /**/
+}
+
+/* *Smartphones*/
+@media (max-width: 600px) {
+  /*Título de bienvenida al portafolio*/
+  section.presentacion > h1{
+    font-size: 1.7rem;
+  }
+  /*Mi nombre*/
+  section.presentacion > p{
+    font-size: 1.5rem;
+  }
+  /*Tamaño de la foto*/
+  div.contenedor_imagen img {
+    width: 38%;
+  }
+  /*Sobre mi*/
+  section.presentacion p {
+    padding: 6% 0 0;
+  }
+  /*Descripción sobre mí*/
+  section.presentacion p.mi_descripcion{
+    font-size: 1.2rem;
+    padding: 4%;
+  }
+  /* Título de habilidades técnicas front y back*/
+  section.logos_tecnologias > h1{
+    font-size: 1.8rem;
+  }
+  /*Tamaño de los logos fron y back*/
+  .contenedor_logos img.logo{
+    max-width: 85px;
+    min-width: 80px;
+  }
+  /*Título de las descripciones de las habilidades técnicas*/
+  section.descrip_tecnologias > h1{
+    font-size: 1.8rem;
+  }
+  /*Descripciones de las habilidades técnicas*/
+  div.descrip_dominio ul li{
+    font-size: 1.3rem;
+    padding-left: 1%;
+    margin: 7% 5% 20%;
+  }
+  /**/
 }
