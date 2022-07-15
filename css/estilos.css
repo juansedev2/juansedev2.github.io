@@ -42,7 +42,18 @@ TODO: Realizar los estilos para modo responsive, ya que por el momento el primer
   --color-azul-cool2: #1c4775;
   --color-azul-cool3: #08415C;
   --color-azul-cool4: #2c3e50;
+  --color-azul-cool5: #034574;
   --color-verde-claro-cool: #039e84;
+
+  /*Variables para las animaciones gracias a la librería Animate.css*/
+
+  /*Duraciones: */
+  --animacion-duracion-2s: 2s;
+  --animacion-duracion-2-2s: 2.2s;
+  --animacion-duracion-4s: 4s;
+  
+  /*Forma de animación*/
+  --animacion-forma-1: fadeInDown;
 }
 /* * INICIO ESTILOS DEL HEADER Y EL MENÚ DE NAVEGACIÓN*/
 .header {
@@ -63,6 +74,8 @@ TODO: Realizar los estilos para modo responsive, ya que por el momento el primer
 .nav-link {
   color: white;
   text-decoration: none;
+  animation: var(--animacion-forma-1); 
+  animation-duration: var(--animacion-duracion-2s); 
 }
 .logo {
   font-size: 30px;
@@ -81,6 +94,8 @@ TODO: Realizar los estilos para modo responsive, ya que por el momento el primer
   line-height: 80px;
   text-transform: uppercase;
   width: max-content;
+  animation: var(--animacion-forma-1);
+  animation-duration: var(--animacion-duracion-2s);
 }
 .nav-menu-link {
   padding: 8px 12px;
@@ -88,7 +103,7 @@ TODO: Realizar los estilos para modo responsive, ya que por el momento el primer
 }
 .nav-menu-link:hover,
 .nav-menu-link_active {
-  background-color: #034574;
+  background-color: var(--color-azul-cool5);
   transition: 0.5s;  /*Una leve transición de de animación al deslizar el menú*/
 }
 /* TOGGLE */
@@ -107,7 +122,7 @@ TODO: Realizar los estilos para modo responsive, ya que por el momento el primer
 #contenedor_presentacion {
   width: 100%;
   height: auto;
-  background-image: url(/img/code5.png); /*La imagen está bien; pero necesita un retoque*/
+  background-image: url(../img/code5.png); /*La imagen está bien; pero necesita un retoque*/
   background-attachment: fixed; /* * Para que la imagen siga a la barra de scroll*/
   background-size: 100%; /* ! Con esto indico que mi fondo ocupe el 100$ del contenedor y no se repita*/
   box-sizing: border-box;
@@ -122,6 +137,8 @@ div.contenedor_imagen img {
   width: 18%;
   border-radius: 50%; /*! Con porcentaje se hace un borde circular*/
   position: relative;
+  animation: var(--animacion-forma-1);
+  animation-duration: var(--animacion-duracion-2-2s);
 }
 section.presentacion{
   color: var(--color-blanco);
@@ -137,11 +154,15 @@ section.presentacion h2 {
 }
 section.presentacion > h1 {
   font-size: 2.4rem;
+  animation: var(--animacion-forma-1);
+  animation-duration: var(--animacion-duracion-2s);
 }
 section.presentacion > p {
   margin-top: 0.1%;
   font-size: 2rem;
   font-weight: bolder;
+  animation: var(--animacion-forma-1);
+  animation-duration: var(--animacion-duracion-2-2s);
 }
 section.presentacion > h2 {
   font-size: 2rem;
@@ -152,6 +173,8 @@ section.presentacion p.mi_descripcion {
   line-height: 8vh; /*Espacio entre líneas del texto según el alto de pantalla*/
   font-weight: bolder;
   margin-top: -4%; /*Lo reduzco un poco porque se vería muy separado el texto del título*/
+  animation: var(--animacion-forma-1);
+  animation-duration: var(--animacion-duracion-2-2s);
 }
 .contenedor_descripcion {
   background-color: var(--color-negro-Tree);
@@ -159,6 +182,8 @@ section.presentacion p.mi_descripcion {
 p.titulo_mi_descripcion {
   margin: 0;
   font-size: 3.5vh;
+  animation: var(--animacion-forma-1);
+  animation-duration: var(--animacion-duracion-2-2s);
 }
 p.developer{
   display: inline-block;
@@ -341,6 +366,11 @@ div.proyecto a{
   font-weight: bold;
   font-size: 1.2em;
   margin: 15px;
+}
+/*! Es una prueba de animación para ver como actúa*/
+div.animado_pr:hover{
+  animation: pulse; 
+  animation-duration: 1s; 
 }
 
 /* * INICIO ESTILOS DE SECCIÓN DE CONTACTO*/
