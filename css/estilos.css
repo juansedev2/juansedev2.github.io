@@ -38,6 +38,7 @@ TODO: Realizar los estilos para modo responsive, ya que por el momento el primer
   --color-negroTran2: rgba(0, 0, 0, 0.75);
   --color-beige-oscurito: #f3d899;
   --color-rojo-claro: #f71735;
+  --color-rojo-oscurito: #D90429;
   --color-azul-cool: #1c3041; /* ! Reservado para sección de contacto*/
   --color-azul-cool2: #1c4775;
   --color-azul-cool3: #08415C;
@@ -188,6 +189,25 @@ p.titulo_mi_descripcion {
 p.developer{
   display: inline-block;
   background-color: var(--color-negro-Tree);
+}
+/* * Título de la sección de habilidades tecnológicas*/
+section#contenedor_intro_habilidade_tecno{
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  background-color: var(--color-rojo-oscurito);
+}
+section.contenedor_titulo{
+  width: auto;
+  margin: auto;
+  padding: 1.3%;
+}
+section.contenedor_titulo h1{
+  text-align: center;
+  color: var(--color-blanco);
+  font-size: 2.2rem;
+  animation: var(--animacion-forma-1);
+  animation-duration: var(--animacion-duracion-2-2s);
 }
 /* * INICIO ESTILOS de sección de habilidades técnicas FRONT*/
 #contenedor_habilidades_tecnicas_front {
@@ -503,8 +523,6 @@ div.contenedor_creditos{
   .nav-toggle:focus:not(:focus-visible) {
   outline: none;
   }
-
-  /**/
 }
 
 /* *Smartphones para cosas más puntuales en el diseño*/
@@ -565,7 +583,7 @@ div.contenedor_creditos{
   }
   /*Título de habilidades personales (sección)*/
   .presentacion_habilidades_personales > h1{
-    font-size: 1.9rem;
+    font-size: 1.7rem;
     padding: 14% 0 10%;
     font-weight: bolder;
   }
@@ -636,5 +654,10 @@ div.contenedor_creditos{
   }
   div.creditos h3{
     font-size: 1rem;
+  }
+  /* * Título de sección de habilidades técnias*/
+  section.contenedor_titulo h1{
+    font-size: 1.4rem;
+    padding: 2.5%;
   }
 }
