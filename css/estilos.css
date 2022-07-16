@@ -661,3 +661,14 @@ div.contenedor_creditos{
     padding: 2.5%;
   }
 }
+/* * Cuando la orientación de pantalla sea horizontal para smarthphone*/
+@media (max-width: 700px) and (orientation: landscape){
+  /* Mi descripción*/
+  section.presentacion p.mi_descripcion{
+    line-height: 10vh;
+  }
+  /*Descripción de habilidades*/
+  .contenedor_habilidad p{
+    line-height: 10vh;
+  }
+}
