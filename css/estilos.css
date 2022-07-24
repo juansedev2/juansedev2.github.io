@@ -10,6 +10,7 @@ TODO: Realizar los estilos para modo responsive, ya que por el momento el primer
   margin: 0;
   padding: 0;
   font-family: 'Lato', sans-serif;
+  font-display: swap;
 }
 /*! Fuentes de Lato: https://fonts.google.com/specimen/Lato#standard-styles*/
 /* lato-regular - latin */
@@ -463,7 +464,7 @@ div.creditos{
 div.creditos h1{
   margin: 5% 0;
 }
-div.creditos h3{
+div.creditos h2{
   margin: 4% 0;
 }
 div.contenedor_creditos{
@@ -652,7 +653,7 @@ div.contenedor_creditos{
   div.creditos h1{
     font-size: 1.1rem;
   }
-  div.creditos h3{
+  div.creditos h2{
     font-size: 1rem;
   }
   /* * Título de sección de habilidades técnias*/
