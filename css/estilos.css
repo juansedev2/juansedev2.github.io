@@ -123,7 +123,7 @@ TODO: Realizar los estilos para modo responsive, ya que por el momento el primer
 #contenedor_presentacion {
   width: 100%;
   height: auto;
-  background-image: url(../img/code5.png); /*La imagen está bien; pero necesita un retoque*/
+  background-image: url(../img/code5.webp); /*La imagen está bien; pero necesita un retoque*/
   background-attachment: fixed; /* * Para que la imagen siga a la barra de scroll*/
   background-size: 100%; /* ! Con esto indico que mi fondo ocupe el 100$ del contenedor y no se repita*/
   box-sizing: border-box;
