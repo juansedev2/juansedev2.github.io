@@ -395,6 +395,9 @@ div.animado_pr:hover{
   animation: pulse; 
   animation-duration: 1s; 
 }
+img.logo_calculadora{
+  width: 200px;
+}
 
 /* * INICIO ESTILOS DE SECCIÓN DE CONTACTO*/
 section#contenedor_contacto{
