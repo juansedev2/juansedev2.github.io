@@ -137,7 +137,7 @@ section.presentacion {
 }
 /*Necesitamos ajustar la imagen de fondo del contenedor*/
 div.contenedor_imagen img {
-  width: 18%;
+  width: 400px;
   border-radius: 27%; /*! Con porcentaje se hace un borde circular*/
   position: relative;
   animation: var(--animacion-forma-1);
